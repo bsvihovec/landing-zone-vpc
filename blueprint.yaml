@@ -6,6 +6,8 @@ description: "Landing zone vpc solution"
 settings:
   - name: TF_LOG
     value: "DEBUG"
+  - name: TF_VERSION
+    value: 0.13
 inputs:
   - name: region
   - name: prefix
