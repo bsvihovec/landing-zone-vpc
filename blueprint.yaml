@@ -16,6 +16,13 @@ inputs:
   - name: ssh_key_ids
   - name: vsi_floating_ip
   - name: vsi_per_subnet
+outputs:
+  - name: id
+    value: $module.slz_vpc.outputs.vpc_id
+    description: "VPC id"
+  - name: crn
+    value: $module.slz_vpc.outputs.vpc_crn
+    description: "VPC crn"
 modules:
   - module_type: terraform
     name: "slz_vpc"
@@ -47,6 +54,7 @@ modules:
     outputs:
       - name: subnet_zone_list
       - name: vpc_id
+      - name: vpc_crn
   - module_type: terraform
     name: "slz_vsi"
     source:
