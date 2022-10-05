@@ -1,6 +1,7 @@
 name: "vpc-solution"
 schema_version: "1.0.0"
 type: "blueprint"
+location: us-south
 description: "Landing zone vpc solution"
 settings:
   - name: TF_LOG
