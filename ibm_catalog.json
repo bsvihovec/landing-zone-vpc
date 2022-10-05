@@ -5,6 +5,7 @@
         {
             "label": "Blueprint - Git",
             "name": "blueprint_git",
+            "working_directory": "examples/blueprint-git",
             "compliance": {
                 "controls": [
                     {
