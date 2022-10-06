@@ -76,7 +76,7 @@ modules:
         description: "Image ID used for VSI. Run 'ibmcloud is images' to find available images. Be aware that region is important for the image since the id's are different in each region."
         default: "r134-ab47c72d-b11c-417b-a442-9f1ca6a6f5ed"
       - name: security_group
-        value: null
+        value: __NULL__
       - name: create_security_group
         value: false
       - name: tags
