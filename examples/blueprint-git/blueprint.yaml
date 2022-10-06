@@ -119,6 +119,6 @@ modules:
         value: $blueprint.vsi_floating_ip
         type: "bool"
         description: "Add floating IP to VSIs"
-        default: false
+        default: true
       - name: ibmcloud_api_key
         value: ""
