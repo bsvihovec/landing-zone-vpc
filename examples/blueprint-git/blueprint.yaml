@@ -115,7 +115,7 @@ modules:
         value: $blueprint.ssh_key_ids
         type: "list(string)"
         description: "One or more existing ssh key ids to use"
-      - name: vsi_floating_ip
+      - name: enable_floating_ip
         value: $blueprint.vsi_floating_ip
         type: "bool"
         description: "Add floating IP to VSIs"
