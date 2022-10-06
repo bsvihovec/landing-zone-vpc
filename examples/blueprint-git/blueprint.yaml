@@ -85,6 +85,13 @@ modules:
         type: list(string)
       - name: subnets
         value: $workitem.slz_vpc.subnet_zone_list
+        type: | 
+          list(object({
+            name = string
+            id   = string
+            zone = string
+            cidr = string
+          }))
       - name: vpc_id
         value: $workitem.slz_vpc.vpc_id
       - name: prefix
