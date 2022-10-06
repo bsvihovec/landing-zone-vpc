@@ -3,8 +3,8 @@
     "version": "0.0.7",
     "flavors": [
         {
-            "label": "Blueprint - Git",
-            "name": "blueprint_git",
+            "label": "Quickstart",
+            "name": "quickstart",
             "working_directory": "examples/blueprint-git",
             "compliance": {
                 "controls": [
