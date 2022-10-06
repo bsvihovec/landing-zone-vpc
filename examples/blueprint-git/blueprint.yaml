@@ -32,8 +32,7 @@ modules:
     source:
       git: 
         source_type: github
-        git_repo_url: "https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vpc"
-        git_branch: "master"
+        git_repo_url: "https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vpc/tree/main"
     inputs:
       - name: resource_group_id
         value: $blueprint.resource_group
@@ -63,8 +62,7 @@ modules:
     source:
       git: 
         source_type: github
-        git_repo_url: "https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vsi.git"
-        git_branch: "master"
+        git_repo_url: "https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vsi/tree/main"
     inputs:
       - name: resource_group_id
         value: $blueprint.resource_group
