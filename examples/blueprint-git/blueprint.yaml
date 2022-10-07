@@ -57,6 +57,7 @@ modules:
         type: list(string)
       - name: security_group_rules
         value: $blueprint.security_group_rules
+        description: "A list of security group rules to be added to the default vpc security group"
         type: |
           list(
             object({
