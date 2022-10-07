@@ -92,7 +92,7 @@ modules:
           },
           {
             "name":"default-sgr-outbound",
-            "direction":"inbound",
+            "direction":"outbound",
             "remote":"0.0.0.0/0"
           }]
     outputs:
