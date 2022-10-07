@@ -34,7 +34,7 @@ modules:
         git_repo_url: "https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vpc/tree/main"
     settings:
       - name: TF_VERSION
-        value: 1.0
+        value: 1.2
     inputs:
       - name: resource_group_id
         value: $blueprint.resource_group
@@ -88,11 +88,6 @@ modules:
           [{
             "name":"default-sgr-inbound",
             "direction":"inbound",
-            "remote":"0.0.0.0/0"
-          },
-          {
-            "name":"default-sgr-outbound",
-            "direction":"outbound",
             "remote":"0.0.0.0/0"
           }]
     outputs:
