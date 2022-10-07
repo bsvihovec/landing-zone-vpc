@@ -86,14 +86,14 @@ modules:
           )
         default: |
           [{
-            name      = "default-sgr-inbound"
-            direction = "inbound"
-            remote    = "0.0.0.0/0"
+            "name":"default-sgr-inbound",
+            "direction":"inbound",
+            "remote":"0.0.0.0/0"
           },
           {
-            name      = "default-sgr-outbound"
-            direction = "outbound"
-            remote    = "0.0.0.0/0"
+            "name":"default-sgr-outbound",
+            "direction":"inbound",
+            "remote":"0.0.0.0/0"
           }]
     outputs:
       - name: subnet_zone_list
