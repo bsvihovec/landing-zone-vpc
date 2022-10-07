@@ -17,6 +17,7 @@ inputs:
   - name: ssh_key_ids
   - name: vsi_floating_ip
   - name: vsi_per_subnet
+  - name: security_group_rules
 outputs:
   - name: id
     value: $module.slz_vpc.outputs.vpc_id
@@ -54,6 +55,45 @@ modules:
         value: $blueprint.resource_tags
         description: "List of Tags for the resource created"
         type: list(string)
+      - name: security_group_rules
+        value: $blueprint.security_group_rules
+        type: |
+          list(
+            object({
+              name = string
+              direction = string
+              remote = string
+              tcp = optional(
+                object({
+                  port_max = number
+                  port_min = number
+                })
+              )
+              udp = optional(
+                object({
+                  port_max = number
+                  port_min = number
+                })
+              )
+              icmp = optional(
+                object({
+                  type = number
+                  code = number
+                })
+              )
+            })
+          )
+        default: |
+          [{
+            name      = "default-sgr-inbound"
+            direction = "inbound"
+            remote    = "0.0.0.0/0"
+          },
+          {
+            name      = "default-sgr-outbound"
+            direction = "outbound"
+            remote    = "0.0.0.0/0"
+          }]
     outputs:
       - name: subnet_zone_list
       - name: vpc_id
@@ -79,6 +119,7 @@ modules:
         value: __NULL__
       - name: create_security_group
         value: false
+        description: "Create security group for VSI. If this is passed as false, the default will be used"
       - name: tags
         value: $blueprint.resource_tags
         description: "List of Tags for the resource created"
