@@ -24,8 +24,6 @@ inputs:
   - name: resource_tags
     description: "List of Tags for the resource created"
     type: list(string)
-    default: |
-      []
   - name: machine_type
     description: "VSI machine type"
     default: "cx2-32x64"      
