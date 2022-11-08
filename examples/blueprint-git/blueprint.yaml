@@ -43,7 +43,7 @@ inputs:
     default: 1
     description: "Number of VSI instances for each subnet"
   - name: ibmcloud_api_key
-    value: __NOT_SET__
+    value: "__NOT_SET__"
     sensitive: true
     description: APIkey that's associated with the account to provision resources to
   - name: security_group_rules
